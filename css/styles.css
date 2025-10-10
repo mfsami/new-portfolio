@@ -5,9 +5,9 @@
   --rule: #e8e8e8;
   --accent: #e6d6b7;
 
-  /* Wide about panel (same as your current file) */
-  --sidebar-w: 630px;
-  --content-max: 1100px;
+  /* Responsive widths */
+  --sidebar-w: clamp(260px, 35vw, 540px);
+  --content-max: min(1100px, 92vw);
 }
 
 /* Base */
@@ -22,12 +22,12 @@ body {
   font: 16px/1.55 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Layout */
 .wrap {
   display: flex;
   min-height: 100vh;
 }
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   inset: 0 auto 0 0;
@@ -40,51 +40,48 @@ body {
   background: #fff;
 }
 
+/* About block */
 .brand {
   text-transform: uppercase;
-  font-weight: 900;           /* heavier */
-  letter-spacing: 0.5px;      /* smaller than before */
-  font-size: 2.25rem;         /* a hair larger */
-  line-height: 1.05;          /* tighter */
-  margin-bottom: 6px;         /* pull role closer */
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  font-size: clamp(24px, 2.4vw, 36px);
+  line-height: 1.06;
+  margin-bottom: 6px;
 }
 
 .role {
   font-style: italic;
-  font-weight: 300;           /* a bit bolder than normal */
-  font-size: 1.2rem;          /* slightly larger */
-  color: #000000;             /* darker than your muted gray */
-  margin-top: 0;              /* no extra gap */
-  margin-bottom: 8px;         /* small space before blurb */
+  font-weight: 600;
+  font-size: clamp(14px, 1.4vw, 19px);
+  color: #4a4a4a;
+  margin: 0 0 8px 0;
 }
 
 .blurb {
-  color: #1e1e1e;             /* a notch darker */
-  line-height: 0.1;          /* a bit roomier for reading */
+  color: #1e1e1e;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.45;
   margin: 8px 0 16px;
-  font-size: 0.8rem;
 }
 
+/* Social icons */
 .social {
   display: flex;
-  gap: 13px;         /* spacing between icons */
-  padding-top: 20px;           /* tighter stack */
+  gap: 15px;
+  padding-top: 20px;
 }
 
 .social a {
-  width: auto;
-  height: auto;
-  border: none;               /* no circle */
-  border-radius: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;            /* larger glyph/emoji or icon font */
-  color: #000;                /* solid black like the example */
-  padding: 0;
   text-decoration: none;
+  color: #000;
 }
 
+.social a i {
+  font-size: 28px;
+}
+
+/* Edge labels */
 .edge-label {
   position: fixed;
   top: 10px;
@@ -106,6 +103,7 @@ body {
   left: calc(var(--sidebar-w) + 12px);
 }
 
+/* Main */
 .main {
   margin-left: var(--sidebar-w);
   width: calc(100% - var(--sidebar-w));
@@ -114,7 +112,7 @@ body {
 .container {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 36px 16px 24px;
+  padding: 32px 16px 24px;
 }
 
 /* Projects */
@@ -132,16 +130,16 @@ section.project {
 .meta h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 2.4rem;
-  line-height: 1.2;
+  font-size: clamp(22px, 2.2vw, 38px);
+  line-height: 1.18;
   letter-spacing: .01em;
 }
 
 .meta p {
   margin: 12px 0 0;
   color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.55;
 }
 
 .btns {
@@ -179,23 +177,51 @@ section.project {
   height: 120px;
 }
 
-/* Responsive */
-@media (max-width: 980px) {
-  :root {
-    --sidebar-w: 280px;
-  }
+/* ===== Responsive breakpoints ===== */
+@media (max-width: 1200px) {
+  :root { --sidebar-w: 480px; }
 }
 
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 380px; }
+}
+
+@media (max-width: 880px) {
+  :root { --sidebar-w: 320px; }
+}
+
+/* Mobile collapse (stacked layout) */
 @media (max-width: 720px) {
-  :root {
-    --sidebar-w: 0;
+  .wrap {
+    display: flex;
+    flex-direction: column;
   }
+
+  :root { --sidebar-w: 0; }
 
   .sidebar {
     position: static;
     width: auto;
     border: none;
-    padding: 18px 16px 8px;
+    padding: 56px 20px 24px; /* more breathing room */
+    min-height: 65vh;        /* ensures about takes vertical space */
+  }
+
+  .brand { margin-bottom: 10px; }
+  .role  { margin: 0 0 10px 0; }
+  .blurb { margin: 10px 0 0; line-height: 1.5; }
+  .social { padding-top: 22px; gap: 18px; }
+
+  .edge-label {
+    position: static;
+    padding: 8px 0 12px;
+    margin: 18px 0 12px;
+    top: auto;
+  }
+
+  .edge-label.right {
+    left: auto;
+    margin-top: 24px;
   }
 
   .main {
@@ -203,9 +229,13 @@ section.project {
     width: 100%;
   }
 
-  .edge-label.right {
-    left: 12px;
+  .container {
+    padding: 0 16px 24px;
   }
 
-  
+  .project-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }

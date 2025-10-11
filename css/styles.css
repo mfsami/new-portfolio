@@ -4,10 +4,73 @@
   --muted: #6f6f6f;
   --rule: #e8e8e8;
   --accent: #e6d6b7;
+  --sidebar-bg: #fff;
+  --role-text: #4a4a4a;
+  --blurb-text: #1e1e1e;
+  --meta-text: #333;
+  --btn-text: #111;
+  --icon-color: #000;
 
   /* Responsive widths */
   --sidebar-w: clamp(260px, 35vw, 540px);
   --content-max: min(1100px, 92vw);
+}
+
+.darkmode {
+  --bg: #0b0b0b;
+  --ink: #fafafa;
+  --muted: #9c9c9c;
+  --rule: #333;
+  --accent: #b7d6e6;
+  --sidebar-bg: #111;
+  --role-text: #ddd;
+  --blurb-text: #eee;
+  --meta-text: #ccc;
+  --btn-text: #fafafa;
+  --icon-color: #fff;
+}
+
+#theme-switch{
+  height: 40px;
+  width: 40px;
+  padding: 0px;
+  border-radius: 50%;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Base size */
+#theme-switch img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Sun: dark by default (light mode) */
+.icon-sun {
+  filter: brightness(0) invert(0);  
+}
+
+/* Moon: light by default */
+.icon-moon {
+  filter: brightness(0) invert(1);
+}
+
+
+#theme-switch img:last-child{
+  display: none;
+}
+
+.darkmode #theme-switch img:first-child{
+  display: none;
+}
+
+.darkmode #theme-switch img:last-child{
+  display: block;
 }
 
 /* Base */
@@ -37,7 +100,7 @@ body {
   justify-content: center;
   padding: 32px 22px;
   border-right: 1px solid var(--rule);
-  background: #fff;
+  background: var(--sidebar-bg);
 }
 
 /* About block */
@@ -54,12 +117,12 @@ body {
   font-style: italic;
   font-weight: 600;
   font-size: clamp(14px, 1.4vw, 19px);
-  color: #4a4a4a;
+  color: var(--role-text);
   margin: 0 0 8px 0;
 }
 
 .blurb {
-  color: #1e1e1e;
+  color: var(--blurb-text);
   font-size: clamp(14px, 1.2vw, 16px);
   line-height: 1.45;
   margin: 8px 0 16px;
@@ -74,7 +137,7 @@ body {
 
 .social a {
   text-decoration: none;
-  color: #000;
+  color: var(--icon-color);
 }
 
 .social a i {
@@ -137,7 +200,7 @@ section.project {
 
 .meta p {
   margin: 12px 0 0;
-  color: #333;
+  color: var(--meta-text);
   font-size: clamp(14px, 1.1vw, 16px);
   line-height: 1.55;
 }
@@ -151,17 +214,17 @@ section.project {
 
 .btn {
   padding: 10px 16px;
-  border: 2px solid #111;
+  border: 2px solid var(--btn-text);
   border-radius: 999px;
   text-decoration: none;
-  color: #111;
+  color: var(--btn-text);
   font-weight: 700;
   font-size: .9rem;
   line-height: 1;
 }
 
 .card {
-  background: #fff;
+  background: var(--sidebar-bg);
   border: 1px solid var(--rule);
   border-radius: 16px;
   overflow: hidden;
@@ -203,8 +266,8 @@ section.project {
     position: static;
     width: auto;
     border: none;
-    padding: 56px 20px 24px; /* more breathing room */
-    min-height: 65vh;        /* ensures about takes vertical space */
+    padding: 56px 20px 24px; 
+    min-height: 65vh;        
   }
 
   .brand { margin-bottom: 10px; }

@@ -200,7 +200,7 @@ body {
 .container {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 32px 16px 24px;
+  
 }
 
 /* Projects */
@@ -260,6 +260,55 @@ section.project {
 .spacer {
   height: 120px;
 }
+
+
+/* === Home page styles === */
+
+
+.page-home h1 {
+  font-weight: 900;
+  letter-spacing: .2px;
+  font-size: clamp(28px, 3vw, 44px);
+  margin: 4px 0 2px;
+}
+
+.page-home .dot { 
+  color: #ffcf66;    /* yellow/orange dot */
+}
+
+.page-home .subtitle {
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+.page-home .rule {
+  border: 0;
+  border-top: 2px solid var(--rule);
+  margin: 24px 0 28px;
+}
+
+.page-home {
+  max-width: 740px;
+  margin: 0 auto;
+  min-height: 100vh;            /* take full screen height */
+  display: flex;                /* flexbox centering */
+  flex-direction: column;
+  justify-content: center;      /* vertical center */
+  padding: 40px 20px;           /* some breathing room */
+}
+
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.home-footer p { 
+  margin: 0; 
+  color: var(--muted);
+}
+
 
 /* ===== Responsive ===== */
 @media (max-width: 720px) {

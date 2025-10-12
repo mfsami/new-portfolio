@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sami El-Sayed — Portfolio</title>
+  <title>Sami El-sayed</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-
-  <!-- Icons (GitHub/LinkedIn/mail if you use them elsewhere) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Js scripts -->
   <script type = "text/javascript" src = "js/darkmode.js" defer></script>
+  <script src="js/navHighlight.js"></script>
 
 
   <link rel="stylesheet" href="css/styles.css">
@@ -22,7 +23,7 @@
     <!-- LEFT: NAV RAIL -->
     <aside class="sidebar nav">
       <div class="nav-header">
-        <a class="brand-mini" href="#top">sami.love</a>
+        <a class="brand-mini" href="#top">sami el-sayed</a>
       </div>
 
       <nav class="sidenav" aria-label="Primary">
@@ -56,7 +57,6 @@
     <main class="main" id="top">
       <div class="container">
 
-        <!-- Example project sections with IDs that match the nav links -->
         <section class="project" id="last-stand">
           <div class="project-inner">
             <div class="meta">
@@ -81,29 +81,9 @@
           </div>
         </section>
 
-        
-
-
         <div class="spacer"></div>
       </div>
     </main>
   </div>
-
-  <!-- Auto-highlight current nav link while scrolling -->
-  <script>
-    const links = [...document.querySelectorAll('.sidenav .nav-item[href^="#"]')];
-    const ids = links.map(a => a.getAttribute('href')).filter(Boolean).map(h => h.slice(1));
-    const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
-
-    const io = new IntersectionObserver(entries => {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + visible.target.id));
-    }, { rootMargin: '-20% 0px -60% 0px', threshold: [0, .25, .5, .75, 1] });
-
-    sections.forEach(s => io.observe(s));
-  </script>
 </body>
 </html>

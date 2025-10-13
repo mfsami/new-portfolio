@@ -1,13 +1,22 @@
-const links = [...document.querySelectorAll('.sidenav .nav-item[href^="#"]')];
-const ids = links.map(a => a.getAttribute('href')).filter(Boolean).map(h => h.slice(1));
-const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".sidenav .nav-item");
+  const currentPage = window.location.pathname.split("/").pop();
 
-const io = new IntersectionObserver(entries => {
-  const visible = entries
-    .filter(e => e.isIntersecting)
-    .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-  if (!visible) return;
-  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + visible.target.id));
-}, { rootMargin: '-20% 0px -60% 0px', threshold: [0, .25, .5, .75, 1] });
+  links.forEach((link) => {
+    // remove any existing highlight
+    link.classList.remove("active");
 
-sections.forEach(s => io.observe(s));
+    // highlight the link if its href matches the current page
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+
+    // special case: if URL ends with nothing (just "/"), treat it as index.html
+    if (
+      (currentPage === "" || currentPage === "/") &&
+      link.getAttribute("href") === "index.html"
+    ) {
+      link.classList.add("active");
+    }
+  });
+});

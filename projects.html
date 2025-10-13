@@ -1,59 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sami El-Sayed — Projects</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <div class="wrap">
-    <!-- Sidebar nav (same as home, but "Projects" active) -->
-    <aside class="sidebar nav">
-      <div class="nav-header">
-        <a class="brand-mini" href="home.html">sami.love</a>
-      </div>
-      <nav class="sidenav" aria-label="Primary">
-        <a class="nav-item" href="home.html">Home</a>
-        <a class="nav-item active" href="projects.html">Projects</a>
-        <div class="nav-section">Contact</div>
-        <a class="nav-item" href="mailto:you@email.com">Email</a>
-        <a class="nav-item" href="https://github.com/youruser" target="_blank">GitHub</a>
-        <a class="nav-item" href="https://linkedin.com/in/youruser" target="_blank">LinkedIn</a>
-      </nav>
-    </aside>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sami El-sayed</title>
 
-    <!-- Main content -->
-    <main class="main">
-      <div class="container">
-        <section class="project" id="last-stand">
-          <div class="project-inner">
-            <div class="meta">
-              <h2>Last Stand</h2>
-              <p>a 2D top-down zombie survival shooter made in Unity C#, featuring modular OOP gameplay systems for shooting, AI, animation, weapons, and health.</p>
-            </div>
-            <div class="card hero">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Js scripts -->
+    <script type="text/javascript" src="js/darkmode.js" defer></script>
+    <script src="js/navHighlight.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- LEFT: NAV RAIL -->
+      <aside class="sidebar nav">
+        <div class="nav-header">
+          <a class="brand-mini" href="#top">sami's journal</a>
+        </div>
+
+        <nav class="sidenav" aria-label="Primary">
+          <a class="nav-item" href="index.html">Home</a>
+          <a class="nav-item" href="#blog">Blog</a>
+          <a class="nav-item" href="projects.html">Projects</a>
+          <a class="nav-item" href="#til">TIL</a>
+          <!-- 
+          <div class="nav-section">Projects</div>
+          <a class="nav-item" href="#last-stand">Last Stand</a>
+          <a class="nav-item" href="#winter-soccer">Winter Soccer League</a>
+          <a class="nav-item" href="#playful-ui">Playful UI Kit</a> -->
+
+          <div class="nav-section">Playground</div>
+          <a class="nav-item" href="#last-stand">Last Stand</a>
+          <a class="nav-item" href="#winter-soccer">Winter Soccer League</a>
+          <a class="nav-item" href="#playful-ui">Playful UI Kit</a>
+
+          <div class="nav-section">Contact</div>
+          <a class="nav-item" href="mailto:samielsayed39@gmail.com">Email</a>
+          <a
+            class="nav-item"
+            href="https://github.com/mfsami"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <a
+            class="nav-item"
+            href="https://linkedin.com/in/YOUR_USERNAME"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </nav>
+        <button id="theme-switch">
+          <img src="assets/icons/light_mode.svg" class="icon-sun" />
+          <img src="assets/icons/dark_mode.svg" class="icon-moon" />
+        </button>
+      </aside>
+
+      <!-- Main content -->
+      <main class="main">
+        <div class="container">
+          <section class="page-projects">
+            <h1>projects<span class="dot">.</span></h1>
+            <p class="subtitle">Things I’ve built</p>
+            <hr class="rule" />
+
+            <div class="projects-grid">
               <img src="assets/images/laststand.jpg" alt="Last Stand" />
+              <img src="assets/images/WSL.png" alt="Winter Soccer League" />
+              <!-- Add more project images here -->
             </div>
-          </div>
-        </section>
-
-        <section class="project" id="winter-soccer">
-          <div class="project-inner">
-            <div class="meta">
-              <h2>Winter Soccer League Site</h2>
-              <p>A responsive website for a local Winter Soccer League using React.js, featuring dynamic components, stat displays, modern UI design, and smooth user navigation.</p>
-            </div>
-            <div class="card hero">
-              <img src="assets/images/WSL.png" alt="Winter Soccer" />
-            </div>
-          </div>
-        </section>
-
-        <!-- Add more projects here -->
-      </div>
-    </main>
-  </div>
-</body>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

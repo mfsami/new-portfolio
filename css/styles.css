@@ -286,11 +286,11 @@ section.project {
 .page-home {
   max-width: 740px;
   margin: 0 auto;
-  min-height: 100vh; /* take full screen height */
-  display: flex; /* flexbox centering */
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  padding: 40px 20px; /* some breathing room */
+  justify-content: center;
+  padding: 40px 20px;
 }
 
 .home-footer {
@@ -337,6 +337,27 @@ section.project {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
   padding: 5px;
+}
+
+.project-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.project-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.project-link:hover img,
+.project-link:focus-visible img {
+  filter: grayscale(100%) brightness(0.75);
+  transform: scale(1.02);
 }
 
 .projects-grid img {

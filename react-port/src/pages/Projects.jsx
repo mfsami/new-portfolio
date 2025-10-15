@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import laststandImg from "../assets/images/laststand.jpg";
 import heartboundImg from "../assets/images/heartbound.png";
 import wslImg from "../assets/images/WsL.png";
@@ -19,9 +21,9 @@ export default function Projects() {
           <hr className="rule" />
 
           <div className="projects-grid">
-            <a className="project-link" href="projects/last-stand.html">
+            <NavLink className="project-link" to="/projects/last-stand">
               <img src={laststandImg} alt="last stand" />
-            </a>
+            </NavLink>
             <a className="project-link" href="projects/heartbound.html">
               <img src={heartboundImg} alt="heartbound" />
             </a>

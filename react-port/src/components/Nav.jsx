@@ -16,9 +16,10 @@ export default function Nav() {
         <NavLink to="/projects" className={cls}>
           Projects
         </NavLink>
-        <a className="nav-item" href="/til">
+        <NavLink to="/til" className={cls}>
           TIL
-        </a>{" "}
+        </NavLink>
+        {/* CONTACT */}
         <div className="nav-section">Contact</div>
         <a className="nav-item" href="mailto:samielsayed39@gmail.com">
           Email

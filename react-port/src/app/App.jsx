@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import RootLayout from "./RootLayout";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
+import TIL from "../pages/TIL";
+import LastStand from "../pages/projects/LastStand";
 
 export default function App() {
   return (
@@ -9,7 +11,8 @@ export default function App() {
       <Route element={<RootLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        {/* add more routes here */}
+        <Route path="/til" element={<TIL />} />
+        <Route path="/projects/last-stand" element={<LastStand />} />
       </Route>
 
       {/* 404 fallback */}

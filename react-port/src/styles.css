@@ -71,6 +71,31 @@
   text-decoration: underline;
 }
 
+/* place the subnav immediately to the right of the main sidebar */
+.sidebar.subnav {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  width: var(--sidebar-w);
+  height: 100vh;
+  /* optional: same background/border as main .sidebar for consistency */
+}
+
+/* main area shifts by two sidebars on the TIL route */
+.main.main--til {
+  margin-left: calc(var(--sidebar-w) * 2);
+}
+
+.page-til {
+  max-width: 740px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
 #theme-switch {
   height: 40px;
   width: 40px;

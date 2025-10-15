@@ -6,6 +6,11 @@ import TIL from "../pages/TIL";
 import LastStand from "../pages/projects/LastStand";
 import Heartbound from "../pages/projects/Heartbound";
 import WinterSoccer from "../pages/projects/WinterSoccer";
+import Portfolio from "../pages/projects/Portfolio";
+import Graphite from "../pages/projects/Graphite";
+import G2ARedesign from "../pages/projects/G2ARedesign";
+import ParryGame from "../pages/projects/ParryGame";
+import SpaceExploration from "../pages/projects/SpaceExploration";
 
 export default function App() {
   return (
@@ -17,6 +22,14 @@ export default function App() {
         <Route path="/projects/last-stand" element={<LastStand />} />
         <Route path="/projects/heartbound" element={<Heartbound />} />
         <Route path="/projects/winter-soccer" element={<WinterSoccer />} />
+        <Route path="/projects/portfolio" element={<Portfolio />} />
+        <Route path="/projects/graphite" element={<Graphite />} />
+        <Route path="/projects/g2a-redesign" element={<G2ARedesign />} />
+        <Route path="/projects/parry-game" element={<ParryGame />} />
+        <Route
+          path="/projects/space-exploration"
+          element={<SpaceExploration />}
+        />
       </Route>
 
       {/* 404 fallback */}

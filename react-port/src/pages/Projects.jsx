@@ -33,27 +33,27 @@ export default function Projects() {
             <NavLink className="project-link" to="/projects/winter-soccer">
               <img src={wslImg} alt="Winter Soccer League" />
             </NavLink>
-            <a className="project-link" href="projects/portfolio.html">
-              <img src={portImg} alt="portfolio" />
-            </a>
+            <NavLink className="project-link" to="/projects/portfolio">
+              <img src={portImg} alt="Portfolio Site" />
+            </NavLink>
           </div>
 
           <div className="projects-grid">
-            <a className="project-link" href="projects/graphite.html">
-              <img src={graphiteImg} alt="graphite" />
-            </a>
-            <a className="project-link" href="projects/g2a-redesign.html">
-              <img src={g2aImg} alt="g2a" />
-            </a>
+            <NavLink className="project-link" to="/projects/graphite">
+              <img src={graphiteImg} alt="Graphite project" />
+            </NavLink>
+            <NavLink className="project-link" to="/projects/g2a-redesign">
+              <img src={g2aImg} alt="G2A Redesign" />
+            </NavLink>
           </div>
 
           <div className="projects-grid">
-            <a className="project-link" href="projects/parry-game.html">
-              <img src={sunImg} alt="sun" />
-            </a>
-            <a className="project-link" href="projects/space-exploration.html">
-              <img src={wipImg} alt="wip" />
-            </a>
+            <NavLink className="project-link" to="/projects/space-exploration">
+              <img src={sunImg} alt="VR Space Exploration" />
+            </NavLink>
+            <NavLink className="project-link" to="/projects/parry-game">
+              <img src={wipImg} alt="Parry Game" />
+            </NavLink>
           </div>
         </section>
       </div>

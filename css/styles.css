@@ -16,7 +16,7 @@
   --nav-item-bg: rgba(255, 255, 255, 0.06);
   --nav-item-hover-bg: rgba(255, 255, 255, 0.1);
   --nav-item-active-bg: rgba(255, 255, 255, 0.16);
-  --nav-item-hover: rgb(248, 169, 51);
+  --nav-item-hover: #ffcf66;
 
   /* content column */
   --content-max: min(1100px, 92vw);
@@ -25,6 +25,9 @@
   --icon-color: #000;
 
   --dots-color: rgba(207, 207, 207, 0.753);
+
+  --sidebar-w: 200px; /* first rail width (you already have this) */
+  --subnav-w: 240px; /* width of the second rail */
 }
 
 .darkmode {
@@ -144,6 +147,18 @@ body {
   background: var(--nav-bg);
 }
 
+.sidebar.subnav {
+  position: fixed;
+  inset: 0 auto 0 var(--sidebar-w); /* sit right of the first rail */
+  width: var(--subnav-w);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--nav-border);
+  background: var(--nav-bg);
+  padding: 16px 12px;
+  gap: 10px;
+}
+
 /* Nav variant */
 .sidebar.nav {
   justify-content: flex-start;
@@ -214,6 +229,12 @@ body {
   margin-left: var(--sidebar-w);
   width: calc(100% - var(--sidebar-w));
 }
+
+.mainTIL {
+  margin-left: calc(var(--sidebar-w) + var(--subnav-w));
+  width: calc(100% - (var(--sidebar-w) + var(--subnav-w)));
+}
+
 .container {
   max-width: var(--content-max);
   margin: 0 auto;
@@ -287,7 +308,7 @@ section.project {
 }
 
 .page-home .dot {
-  color: #ffcf66; /* yellow/orange dot */
+  color: #ffcf66;
 }
 
 .subtitle {
@@ -435,5 +456,16 @@ section.project {
   }
   .container {
     padding: 0 16px 24px;
+  }
+
+  .sidebar.subnav {
+    position: static;
+    width: auto;
+    border-right: 0;
+    border-top: 1px solid var(--nav-border);
+  }
+  .main {
+    margin: 0;
+    width: 100%;
   }
 }

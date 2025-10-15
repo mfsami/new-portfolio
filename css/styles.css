@@ -1,9 +1,10 @@
 :root {
+  /* light mode */
   /* palette */
   --bg: #fafafa;
   --ink: #0b0b0b;
-  --muted: #6f6f6f;
-  --rule: #e8e8e8;
+  --muted: #3d3d3d;
+  --rule: #c2c2c2;
   --accent: #e6d6b7;
 
   /* nav */
@@ -11,7 +12,7 @@
   --nav-bg: var(--bg);
   --nav-border: var(--rule);
   --nav-text: var(--ink);
-  --nav-muted: #9aa0a6;
+  --nav-muted: #6a6d72;
   --nav-item-bg: rgba(255, 255, 255, 0.06);
   --nav-item-hover-bg: rgba(255, 255, 255, 0.1);
   --nav-item-active-bg: rgba(255, 255, 255, 0.16);
@@ -22,6 +23,8 @@
 
   /* icon color */
   --icon-color: #000;
+
+  --dots-color: rgba(207, 207, 207, 0.753);
 }
 
 .darkmode {
@@ -40,6 +43,8 @@
   --nav-item-active-bg: rgba(255, 255, 255, 0.16);
 
   --icon-color: #fff;
+
+  --dots-color: rgba(37, 37, 37, 0.753);
 }
 
 .orangeText {
@@ -55,15 +60,15 @@
   text-decoration: underline;
 }
 
-.dotted {
+/* .dotted {
   height: 500px;
   width: 500px;
-  background-image: radial-gradient(#ccc 10%, transparent 10%),
-    radial-gradient(#ccc 10%, transparent 10%);
+  background-image: radial-gradient(var(--dots-color) 10%, transparent 10%),
+    radial-gradient(var(--dots-color) 10%, transparent 10%);
   background-color: var(--bg);
   background-position: 0 0, 50px 50px;
   background-size: 50px 50px;
-}
+} */
 
 #theme-switch {
   height: 40px;
@@ -118,7 +123,7 @@ body {
     Arial, sans-serif;
 
   /* Dotted background */
-  background-image: radial-gradient(rgba(37, 37, 37, 0.753) 1px, transparent 0);
+  background-image: radial-gradient(var(--dots-color) 1px, transparent 0);
   background-size: 12px 12px;
   background-position: -19px -19px;
 }

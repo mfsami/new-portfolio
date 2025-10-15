@@ -6,6 +6,7 @@
   --rule: #303136;
   --accent: #171717;
 
+  --sidebar-w: clamp(150px, 7vw, 280px);
   --nav-bg: #000000;
   --nav-border: #303136;
   --nav-text: #ffffff;
@@ -13,10 +14,16 @@
   --nav-item-bg: rgba(255, 255, 255, 0.06);
   --nav-item-hover-bg: rgba(255, 255, 255, 0.1);
   --nav-item-active-bg: rgba(255, 255, 255, 0.16);
+  --nav-item-hover: #ffcf66;
 
   --icon-color: #fff;
+  /* content column */
+  --content-max: min(1100px, 92vw);
 
   --dots-color: rgba(37, 37, 37, 0.753);
+
+  --sidebar-w: 200px; /* first nav width */
+  --subnav-w: 240px; /* second nav width */
 }
 
 /* Might have some linking issues cus changed darkmode to lightmode */

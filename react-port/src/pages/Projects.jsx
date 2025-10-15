@@ -24,15 +24,15 @@ export default function Projects() {
             <NavLink className="project-link" to="/projects/last-stand">
               <img src={laststandImg} alt="last stand" />
             </NavLink>
-            <a className="project-link" href="projects/heartbound.html">
-              <img src={heartboundImg} alt="heartbound" />
-            </a>
+            <NavLink className="project-link" to="/projects/heartbound">
+              <img src={heartboundImg} alt="Heartbound" />
+            </NavLink>
           </div>
 
           <div className="projects-grid">
-            <a className="project-link" href="projects/winter-soccer.html">
-              <img src={wslImg} alt="wsl" />
-            </a>
+            <NavLink className="project-link" to="/projects/winter-soccer">
+              <img src={wslImg} alt="Winter Soccer League" />
+            </NavLink>
             <a className="project-link" href="projects/portfolio.html">
               <img src={portImg} alt="portfolio" />
             </a>

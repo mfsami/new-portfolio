@@ -15,7 +15,7 @@
   --nav-item-bg: rgba(255, 255, 255, 0.06);
   --nav-item-hover-bg: rgba(255, 255, 255, 0.1);
   --nav-item-active-bg: rgba(255, 255, 255, 0.16);
-  --nav-item-hover: rgba(218, 88, 1, 1);
+  --nav-item-hover: rgb(248, 169, 51);
 
   /* content column */
   --content-max: min(1100px, 92vw);
@@ -40,6 +40,19 @@
   --nav-item-active-bg: rgba(255, 255, 255, 0.16);
 
   --icon-color: #fff;
+}
+
+.orangeText {
+  color: var(--nav-item-hover);
+}
+
+.visit-link {
+  display: inline; /* prevents full-width click area */
+  color: var(--nav-item-hover);
+  text-decoration: none;
+}
+.visit-link:hover {
+  text-decoration: underline;
 }
 
 .dotted {
@@ -272,8 +285,11 @@ section.project {
   color: #ffcf66; /* yellow/orange dot */
 }
 
-.page-home .subtitle {
-  margin: 0 0 28px;
+.subtitle {
+  margin: 4px 0 6px; /* was 0 0 28px */
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -316,14 +332,9 @@ section.project {
 }
 
 .page-projects h1 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: clamp(28px, 3vw, 44px);
   margin: 4px 0 2px;
-}
-
-.page-projects .subtitle {
-  margin: 0 0 28px;
-  color: var(--muted);
 }
 
 .page-projects .rule {
@@ -366,6 +377,34 @@ section.project {
   object-fit: cover; /* crop/cover image */
   border-radius: 10px; /* rounded corners */
   display: block;
+}
+
+/* Project detail - image stage + body copy */
+.stage {
+  border-radius: 13px;
+  margin: 0 0 24px;
+}
+.stage img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.case-copy {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.case-copy p {
+  margin: 0 0 18px;
+}
+.case-copy blockquote {
+  margin: 16px 0 18px;
+  padding: 10px 16px;
+  border-left: 4px solid var(--rule);
+  background: rgba(255, 255, 255, 0.02);
+  font-style: italic;
 }
 
 /* ===== Responsive ===== */

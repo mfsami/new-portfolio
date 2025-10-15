@@ -15,7 +15,7 @@ Follow these steps to run the project locally:
 2. **Navigate into the project folder**
 
    ```bash
-   cd your-repo-name
+   cd new-portfolio/react-port
    ```
 
 3. **Install dependencies**

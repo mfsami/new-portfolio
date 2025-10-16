@@ -38,7 +38,7 @@ export default function Heartbound() {
             </p>
 
             <figure
-              className="stage"
+              className={styles.stage}
               style={{ width: "60%", margin: "0 auto" }}>
               <img src={heartImg} alt="Heartbound sprite" />
             </figure>

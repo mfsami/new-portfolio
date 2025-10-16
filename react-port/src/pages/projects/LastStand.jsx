@@ -53,7 +53,7 @@ export default function LastStand() {
               build—equal parts study session and nostalgia trip.
             </p>
 
-            <p>Add shop menu gif</p>
+            {/* <p>Add shop menu gif</p> */}
 
             <p>
               My favourite feature was this shop menu I built. Took me days to

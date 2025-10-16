@@ -43,7 +43,7 @@ export default function WinterSoccer() {
               place.
             </p>
 
-            <figure className="stage">
+            <figure className={styles.stage}>
               <img
                 src={teamsStatsImg}
                 alt="Winter Soccer League teams & stats"

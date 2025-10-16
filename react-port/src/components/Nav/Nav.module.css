@@ -74,7 +74,6 @@
   color: var(--nav-text);
 }
 
-/* Responsive rules copied verbatim */
 @media (max-width: 720px) {
   .sidebar.nav {
     position: static;

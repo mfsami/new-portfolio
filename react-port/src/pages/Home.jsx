@@ -12,27 +12,31 @@ export default function Home() {
           <p>Hi,</p>
           <p>
             I’m Sami El-Sayed, a developer who likes to build clean, purposeful
-            things. I split my attention between websites, games, and apps.
-            Outside of coding: film, TV, music, games, and creative
-            storytelling.
+            things. I split my attention between building websites, games, and
+            apps. Outside of coding, I’m into film, TV, music, games, and pretty
+            much any form of creative storytelling.
           </p>
 
           <p>
-            This site is my personal journal—short reads and longer notes: game
-            dev logs, movie recs, art/design threads, music loops, and
-            occasional technical write-ups.
+            This site is my personal journal. You’ll find short reads and longer
+            notes: games I’m working on and how they work, movies worth your
+            time, art & design threads, music I can’t stop looping, and the
+            occasional technical write-up when I’ve learned something worth
+            keeping.
           </p>
 
           <p>
-            I approach projects like a designer as much as a developer—focused
-            on interaction, usability, and how people experience what you make.
-            I’m curious about interfaces, typography, responsive design, 3D, VR,
-            and the future of play.
+            I approach projects like a designer as much as a developer, by
+            shaping ideas into things people can actually use and enjoy. For me,
+            game dev and web dev aren’t just about code, but about interaction,
+            design, usability, and how people experience what you make. That
+            means I’m curious about everything from interfaces, typography, and
+            responsive design to 3D, VR, and the future of play.
           </p>
 
           <p>
-            I love working on projects of all kinds, so this is where I share
-            what I create.
+            I love working on projects of all kinds in my spare time, so this
+            site is my space to share everything I create.
           </p>
 
           <hr className="rule" />

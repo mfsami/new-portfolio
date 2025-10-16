@@ -1,10 +1,10 @@
 import parryImg from "../../assets/images/wip.png";
-
+import styles from "./ProjectDetail.module.css";
 export default function ParryGame() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             Parry Game Prototype<span className="dot">.</span>
           </h1>
@@ -13,12 +13,12 @@ export default function ParryGame() {
           <hr className="rule" />
 
           {/* Image stage */}
-          <figure className="stage">
+          <figure className={styles.stage}>
             <img src={parryImg} alt="Parry game screenshot" />
           </figure>
 
           {/* Copy */}
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               Currently working on a 2D game built in Unity involving parrying
               shots to survive. Still in the early stages. Will update this page

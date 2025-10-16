@@ -1,0 +1,9 @@
+.page-til {
+  max-width: 740px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+}

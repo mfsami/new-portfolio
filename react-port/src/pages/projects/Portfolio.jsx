@@ -1,10 +1,10 @@
 import portaImg from "../../assets/images/porta.png";
-
+import styles from "./ProjectDetail.module.css";
 export default function Portfolio() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             Portfolio Site<span className="dot">.</span>
           </h1>
@@ -13,12 +13,12 @@ export default function Portfolio() {
           <hr className="rule" />
 
           {/* Image */}
-          <figure className="stage">
+          <figure className={styles.stage}>
             <img src={portaImg} alt="Portfolio site screenshot" />
           </figure>
 
           {/* Copy */}
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               Yes, shameless of me to include <em>this exact site</em> as a
               project, but I’m genuinely proud of how it turned out. It’s built

@@ -1,11 +1,11 @@
 import levelImg from "../../assets/images/level.png";
 import heartImg from "../../assets/images/heart.png";
-
+import styles from "./ProjectDetail.module.css";
 export default function Heartbound() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             Heartbound<span className="dot">.</span>
           </h1>
@@ -14,11 +14,13 @@ export default function Heartbound() {
           <hr className="rule" />
 
           {/* Image stage */}
-          <figure className="stage" style={{ width: "60%", margin: "0 auto" }}>
+          <figure
+            className={styles.stage}
+            style={{ width: "60%", margin: "0 auto" }}>
             <img src={levelImg} alt="Heartbound level" />
           </figure>
 
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               Heartbound is a tiny 2D platformer I created back in 2024—one of
               the first games I ever built. It’s short but intentionally tight,

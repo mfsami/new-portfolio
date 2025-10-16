@@ -1,10 +1,10 @@
 import sunImg from "../../assets/images/sun.png";
-
+import styles from "./ProjectDetail.module.css";
 export default function SpaceExploration() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             VR Space Exploration<span className="dot">.</span>
           </h1>
@@ -13,11 +13,11 @@ export default function SpaceExploration() {
           <hr className="rule" />
 
           {/* Image */}
-          <figure className="stage">
+          <figure className={styles.stage}>
             <img src={sunImg} alt="sun vr" />
           </figure>
 
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               Currently working on creating a VR solar system simulation. This
               involves travelling to planets to learn about how gravity behaves

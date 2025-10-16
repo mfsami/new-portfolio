@@ -1,4 +1,5 @@
-import Subnav from "../components/Subnav";
+import Subnav from "../../components/Subnav/Subnav";
+import styles from "./TIL.module.css";
 
 export default function TIL() {
   return (
@@ -6,7 +7,7 @@ export default function TIL() {
       <Subnav />
       <main className="mainTIL">
         <div className="container">
-          <section className="page-til">
+          <section className={styles["page-til"]}>
             <h1>
               things I’ve learnt<span className="dot">.</span>
             </h1>

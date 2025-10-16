@@ -1,8 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import RootLayout from "./RootLayout";
-import Home from "../pages/Home";
-import Projects from "../pages/Projects";
-import TIL from "../pages/TIL";
+
+// Pages
+import Home from "../pages/Home/Home";
+import Projects from "../pages/ProjectsPg/Projects";
+import TIL from "../pages/TIL/TIL";
+
+// Projects
 import LastStand from "../pages/projects/LastStand";
 import Heartbound from "../pages/projects/Heartbound";
 import WinterSoccer from "../pages/projects/WinterSoccer";

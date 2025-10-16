@@ -1,10 +1,11 @@
 import laststandImg from "../../assets/images/laststand.jpg";
+import styles from "./ProjectDetail.module.css";
 
 export default function LastStand() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             Last Stand<span className="dot">.</span>
           </h1>
@@ -13,12 +14,12 @@ export default function LastStand() {
           <hr className="rule" />
 
           {/* Image stage */}
-          <figure className="stage">
+          <figure className={styles.stage}>
             <img src={laststandImg} alt="Last Stand screenshot" />
           </figure>
 
           {/* Body copy */}
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               Last Stand is a 2D top-down zombie survival shooter I built for a
               spring-semester class project. I was both the <em>developer</em>{" "}

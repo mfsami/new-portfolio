@@ -1,8 +1,10 @@
+import styles from "./Home.module.css";
+
 export default function Home() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-home">
+        <section className={styles["page-home"]}>
           <h1>
             info<span className="dot">.</span>
           </h1>
@@ -40,7 +42,7 @@ export default function Home() {
           </p>
 
           <hr className="rule" />
-          <div className="home-footer">
+          <div className={styles["home-footer"]}>
             <p>
               by <strong>Sami El-Sayed</strong>
               <br />

@@ -1,0 +1,53 @@
+/* Exact copies from styles.css */
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 var(--sidebar-w); /* sit right of the first rail */
+  width: var(--subnav-w);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--nav-border);
+  background: var(--nav-bg);
+  padding: 16px 12px;
+  gap: 10px;
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.nav-item {
+  display: block;
+  padding: 10px 12px;
+  margin: 0 4px;
+  border-radius: 10px;
+  color: var(--nav-text);
+  text-decoration: none;
+  background: transparent;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  font-size: 13px;
+}
+
+.nav-item:hover {
+  color: var(--nav-item-hover);
+  background: transparent;
+}
+
+.nav-item.active {
+  background: var(--nav-item-active-bg);
+  color: var(--nav-text);
+}
+
+/* Responsive rules copied verbatim */
+@media (max-width: 720px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    border-right: 0;
+    border-top: 1px solid var(--nav-border);
+  }
+}

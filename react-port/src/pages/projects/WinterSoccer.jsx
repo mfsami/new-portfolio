@@ -1,11 +1,11 @@
 import wslImg from "../../assets/images/WsL.png";
 import teamsStatsImg from "../../assets/images/teamsStats.png";
-
+import styles from "./ProjectDetail.module.css";
 export default function WinterSoccer() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             Winter Soccer League Site<span className="dot">.</span>
           </h1>
@@ -14,12 +14,12 @@ export default function WinterSoccer() {
           <hr className="rule" />
 
           {/* Image stage */}
-          <figure className="stage">
+          <figure className={styles.stage}>
             <img src={wslImg} alt="Winter Soccer League UI mock" />
           </figure>
 
           {/* Body copy */}
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               A local winter soccer tournament needed a simple way to track
               player stats, standings, teams, and weekly highlights across a

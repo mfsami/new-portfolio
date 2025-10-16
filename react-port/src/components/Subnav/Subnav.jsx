@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
+import styles from "./Subnav.module.css";
 
 export default function Subnav() {
-  const cls = ({ isActive }) => (isActive ? "nav-item active" : "nav-item");
+  const cls = ({ isActive }) =>
+    isActive ? `${styles["nav-item"]} ${styles.active}` : styles["nav-item"];
+
   return (
-    <aside className="sidebar subnav">
-      <nav className="sidenav" aria-label="Secondary">
+    <aside className={styles.sidebar}>
+      <nav className={styles.sidenav} aria-label="Secondary">
         <NavLink to="/til#concept-1" className={cls}>
           Concept
         </NavLink>

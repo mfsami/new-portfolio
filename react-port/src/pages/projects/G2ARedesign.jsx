@@ -1,10 +1,10 @@
 import g2aImg from "../../assets/images/g2apage.png";
-
+import styles from "./ProjectDetail.module.css";
 export default function G2ARedesign() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             G2A Redesign<span className="dot">.</span>
           </h1>
@@ -13,12 +13,12 @@ export default function G2ARedesign() {
           <hr className="rule" />
 
           {/* Image stage */}
-          <figure className="stage">
+          <figure className={styles.stage}>
             <img src={g2aImg} alt="G2A Redesign mock" />
           </figure>
 
           {/* Body copy */}
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               Currently working on redesigning the G2A website. This is a fun
               side project I’ve wanted to tackle for a while now. I’m planning

@@ -1,0 +1,23 @@
+.page-home {
+  max-width: 740px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.home-footer {
+  font-size: 14px;
+  color: var(--gray-400);
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+.page-home h1 {
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  font-size: clamp(28px, 3vw, 44px);
+  margin: 4px 0 2px;
+}

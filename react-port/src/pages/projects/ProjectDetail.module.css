@@ -1,0 +1,32 @@
+.page-projects {
+  max-width: 740px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.stage {
+  margin: 24px 0;
+}
+
+.stage img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.case-copy {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.case-copy p {
+  margin-bottom: 18px;
+}
+
+.case-copy blockquote {
+  font-style: italic;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+}

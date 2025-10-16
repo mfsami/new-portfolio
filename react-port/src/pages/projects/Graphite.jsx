@@ -1,11 +1,11 @@
 import graphiteImg from "../../assets/images/graphitee.png";
 import appImg from "../../assets/images/app.png";
-
+import styles from "./ProjectDetail.module.css";
 export default function Graphite() {
   return (
     <main className="main">
       <div className="container">
-        <section className="page-projects">
+        <section className={styles["page-projects"]}>
           <h1>
             Graphite<span className="dot">.</span>
           </h1>
@@ -14,12 +14,12 @@ export default function Graphite() {
           <hr className="rule" />
 
           {/* Image stage */}
-          <figure className="stage">
+          <figure className={styles.stage}>
             <img src={graphiteImg} alt="Graphite project cover" />
           </figure>
 
           {/* Project copy */}
-          <article className="case-copy">
+          <article className={styles["case-copy"]}>
             <p>
               Graphite is an IoT-powered mobile storage expansion app built as
               my capstone project. I led the app’s <em>UI</em>, owning the

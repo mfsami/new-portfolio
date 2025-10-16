@@ -19,9 +19,9 @@ export default function Nav() {
         <NavLink to="/projects" className={cls}>
           Projects
         </NavLink>
-        <NavLink to="/til" className={cls}>
+        {/* <NavLink to="/til" className={cls}>
           TIL
-        </NavLink>
+        </NavLink> */}
 
         <div className={styles["nav-section"]}>Contact</div>
 

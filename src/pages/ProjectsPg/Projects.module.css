@@ -2,9 +2,10 @@
   max-width: 740px;
   margin: 0 auto;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* keeps header at top, grid fills, footer at bottom */
   padding: 40px 20px;
 }
 

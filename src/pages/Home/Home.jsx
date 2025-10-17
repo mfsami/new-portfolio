@@ -1,4 +1,5 @@
 import styles from "./Home.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -13,10 +14,10 @@ export default function Home() {
 
           <p>Hi,</p>
           <p>
-            I’m Sami El-Sayed, a developer who likes to build clean, purposeful
-            things. I split my attention between building websites, games, and
-            apps. Outside of coding, I’m into film, TV, music, games, and pretty
-            much any form of creative storytelling.
+            I’m <strong>Sami El-Sayed</strong>, a developer who likes to build
+            clean, purposeful things. I split my attention between building
+            websites, games, and apps. Outside of coding, I’m into film, TV,
+            music, games, and pretty much any form of creative storytelling.
           </p>
 
           <p>
@@ -48,6 +49,10 @@ export default function Home() {
               <br />
               samielsayed39@gmail.com
             </p>
+
+            <NavLink to="/projects" className="visit-link">
+              View my work →
+            </NavLink>
           </div>
         </section>
       </div>

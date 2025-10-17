@@ -9,9 +9,22 @@
 }
 
 .home-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 14px;
   color: var(--gray-400);
   line-height: 1.4;
+}
+
+.visit-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.visit-link:hover {
+  text-decoration: underline;
 }
 
 .page-home h1 {

@@ -6,7 +6,7 @@ import App from "./App.jsx";
 import "../styles/global.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/new-portfolio">
+  <BrowserRouter basename="/new-portfolio/">
     <App />
   </BrowserRouter>
 );

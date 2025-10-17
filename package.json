@@ -1,15 +1,15 @@
 {
-  "homepage": "https://samielsayed.dev",
   "name": "react-port",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean": "node -e \"fs=require('fs');fs.rmSync('dist',{recursive:true,force:true});\"",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "npm run clean && vite build && node -e \"fs=require('fs');fs.copyFileSync('dist/index.html','dist/404.html');fs.writeFileSync('dist/CNAME','samielsayed.dev');\" && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.1",

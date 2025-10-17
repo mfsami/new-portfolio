@@ -1,4 +1,5 @@
 {
+  "homepage": "<mfsami.github.io/new-portfolio,",
   "name": "react-port",
   "private": true,
   "version": "0.0.0",
@@ -7,8 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
-    "deploy": "gh-pages -d dist -b gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^19.1.1",

@@ -1,22 +1,38 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import styles from "./Nav.module.css";
 
 export default function Nav() {
+  const [open, setOpen] = useState(false);
   const cls = ({ isActive }) =>
     isActive ? `${styles["nav-item"]} ${styles.active}` : styles["nav-item"];
   return (
     <aside className={`${styles.sidebar} ${styles.nav}`}>
       <div className={styles["nav-header"]}>
-        <a className={styles["brand-mini"]} href="#top">
-          sami&apos;s journal
-        </a>
+        {/* Hamburger  */}
+        <button
+          className={styles["nav-toggle"]}
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}>
+          <span className="material-symbols-outlined">
+            {open ? "close" : "menu"}
+          </span>
+        </button>
       </div>
 
-      <nav className={styles.sidenav} aria-label="Primary">
-        <NavLink to="/" className={cls}>
+      <nav
+        className={`${styles.sidenav} ${open ? styles.open : ""}`}
+        aria-label="Primary">
+        <div className={styles["brand-row"]}>
+          <a className={styles["brand-mini"]} href="#top">
+            sami&apos;s journal
+          </a>
+        </div>
+        <NavLink to="/" className={cls} onClick={() => setOpen(false)}>
           Home
         </NavLink>
-        <NavLink to="/projects" className={cls}>
+        <NavLink to="/projects" className={cls} onClick={() => setOpen(false)}>
           Projects
         </NavLink>
         {/* <NavLink to="/til" className={cls}>

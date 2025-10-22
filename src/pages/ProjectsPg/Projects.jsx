@@ -28,10 +28,11 @@ export default function Projects() {
               to="/projects/last-stand">
               <img src={laststandImg} alt="last stand" />
             </NavLink>
+
             <NavLink
               className={styles["project-link"]}
-              to="/projects/heartbound">
-              <img src={heartboundImg} alt="Heartbound" />
+              to="/projects/space-exploration">
+              <img src={sunImg} alt="VR Space Exploration" />
             </NavLink>
           </div>
 
@@ -49,9 +50,12 @@ export default function Projects() {
           </div>
 
           <div className={styles["projects-grid"]}>
-            <NavLink className={styles["project-link"]} to="/projects/graphite">
-              <img src={graphiteImg} alt="Graphite project" />
+            <NavLink
+              className={styles["project-link"]}
+              to="/projects/heartbound">
+              <img src={heartboundImg} alt="Heartbound" />
             </NavLink>
+
             <NavLink
               className={styles["project-link"]}
               to="/projects/g2a-redesign">
@@ -60,11 +64,10 @@ export default function Projects() {
           </div>
 
           <div className={styles["projects-grid"]}>
-            <NavLink
-              className={styles["project-link"]}
-              to="/projects/space-exploration">
-              <img src={sunImg} alt="VR Space Exploration" />
+            <NavLink className={styles["project-link"]} to="/projects/graphite">
+              <img src={graphiteImg} alt="Graphite project" />
             </NavLink>
+
             <NavLink
               className={styles["project-link"]}
               to="/projects/parry-game">

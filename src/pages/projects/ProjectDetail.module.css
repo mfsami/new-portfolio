@@ -31,6 +31,16 @@
   color: var(--text-secondary);
 }
 
+.video {
+  display: block;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  background: #000; /* so it doesn't look "blank" before it loads */
+}
+
 @media (max-width: 720px) {
   .page-projects {
     padding: 32px 16px;

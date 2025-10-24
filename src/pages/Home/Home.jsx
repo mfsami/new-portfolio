@@ -21,20 +21,19 @@ export default function Home() {
           </p>
 
           <p>
-            This site is my personal journal. You’ll find short reads and longer
-            notes: games I’m working on and how they work, movies worth your
-            time, art & design threads, music I can’t stop looping, and the
-            occasional technical write-up when I’ve learned something worth
-            keeping.
+            This site is my personal journal. You’ll find my projects, games I’m
+            working on and how they work, personal media interests worth your
+            time, and the occasional technical write-up when I’ve learned
+            something worth keeping.
           </p>
 
           <p>
             I approach projects like a designer as much as a developer, by
             shaping ideas into things people can actually use and enjoy. For me,
-            game dev and web dev aren’t just about code, but about interaction,
-            design, usability, and how people experience what you make. That
-            means I’m curious about everything from interfaces, typography, and
-            responsive design to 3D, VR, and the future of play.
+            development isn't just about code, but about interaction, design,
+            usability, and how people experience what you make. That means I’m
+            curious about everything from interfaces, typography, and responsive
+            design to 2D, 3D, and VR.
           </p>
 
           <p>

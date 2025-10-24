@@ -1,4 +1,6 @@
 import laststandImg from "../../assets/images/laststand.jpg";
+import laststand from "../../assets/clips/laststand.mp4";
+import laststandmenu from "../../assets/clips/laststandmenu.mp4";
 import styles from "./ProjectDetail.module.css";
 
 export default function LastStand() {
@@ -39,6 +41,17 @@ export default function LastStand() {
               components so features can swap in without breaking others.
             </p>
 
+            {/* Video clip */}
+            <video
+              src={laststand}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={styles.video}
+              preload="metadata"
+            />
+
             <p>
               I also wrote custom camera/rendering scripts for a pixel-perfect
               look—orthographic sizing, integer snapping, and jitter-free
@@ -53,7 +66,16 @@ export default function LastStand() {
               build—equal parts study session and nostalgia trip.
             </p>
 
-            {/* <p>Add shop menu gif</p> */}
+            {/* Video clip */}
+            <video
+              src={laststandmenu}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={styles.video}
+              preload="metadata"
+            />
 
             <p>
               My favourite feature was this shop menu I built. Took me days to

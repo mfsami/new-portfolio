@@ -1,6 +1,10 @@
 import laststandImg from "../../assets/images/laststand.jpg";
 import laststand from "../../assets/clips/laststand.mp4";
 import laststandmenu from "../../assets/clips/laststandmenu.mp4";
+
+import laststandmenuWebm from "../../assets/clips/laststandmenuWebm.webm";
+import laststandWebm from "../../assets/clips/laststandWebm.webm";
+
 import styles from "./ProjectDetail.module.css";
 
 export default function LastStand() {
@@ -43,14 +47,16 @@ export default function LastStand() {
 
             {/* Video clip */}
             <video
-              src={laststand}
               autoPlay
               loop
               muted
               playsInline
               className={styles.video}
-              preload="metadata"
-            />
+              preload="metadata">
+              <source src={laststandWebm} type="video/webm" />
+              <source src={laststandmenu} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
             <p>
               I also wrote custom camera/rendering scripts for a pixel-perfect
@@ -68,14 +74,16 @@ export default function LastStand() {
 
             {/* Video clip */}
             <video
-              src={laststandmenu}
               autoPlay
               loop
               muted
               playsInline
               className={styles.video}
-              preload="metadata"
-            />
+              preload="metadata">
+              <source src={laststandmenuWebm} type="video/webm" />
+              <source src={laststandmenu} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
             <p>
               My favourite feature was this shop menu I built. Took me days to

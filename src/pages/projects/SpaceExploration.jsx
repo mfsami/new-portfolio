@@ -1,6 +1,7 @@
 import sunImg from "../../assets/images/sun.png";
 import oldSpace from "../../assets/images/oldspace.png";
 import spaceVid from "../../assets/clips/space.mp4";
+import spaceVidWebm from "../../assets/clips/spaceWebm.webm";
 import styles from "./ProjectDetail.module.css";
 export default function SpaceExploration() {
   return (
@@ -56,14 +57,16 @@ export default function SpaceExploration() {
 
             {/* Video clip */}
             <video
-              src={spaceVid}
               autoPlay
               loop
               muted
               playsInline
               className={styles.video}
-              preload="metadata"
-            />
+              preload="metadata">
+              <source src={spaceVidWebm} type="video/webm" />
+              <source src={spaceVid} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
             <p>
               This clip shows the travel sequence, my personal favorite.

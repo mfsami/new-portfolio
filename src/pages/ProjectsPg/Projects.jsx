@@ -7,7 +7,7 @@ import portImg from "../../assets/images/port.png";
 import graphiteImg from "../../assets/images/Graphite.png";
 import g2aImg from "../../assets/images/g2a.png";
 import sunImg from "../../assets/images/sun.png";
-import wipImg from "../../assets/images/wip.png";
+import parryImg from "../../assets/images/parry.png";
 
 import styles from "./Projects.module.css";
 
@@ -58,8 +58,8 @@ export default function Projects() {
 
             <NavLink
               className={styles["project-link"]}
-              to="/projects/g2a-redesign">
-              <img src={g2aImg} alt="G2A Redesign" />
+              to="/projects/parry-game">
+              <img src={parryImg} alt="Parry Game" />
             </NavLink>
           </div>
 
@@ -70,8 +70,8 @@ export default function Projects() {
 
             <NavLink
               className={styles["project-link"]}
-              to="/projects/parry-game">
-              <img src={wipImg} alt="Parry Game" />
+              to="/projects/g2a-redesign">
+              <img src={g2aImg} alt="G2A Redesign" />
             </NavLink>
           </div>
         </section>

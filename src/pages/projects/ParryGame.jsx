@@ -1,4 +1,4 @@
-import parryImg from "../../assets/images/wip.png";
+import parryImg from "../../assets/images/parry.png";
 import styles from "./ProjectDetail.module.css";
 export default function ParryGame() {
   return (

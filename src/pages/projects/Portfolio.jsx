@@ -49,7 +49,7 @@ export default function Portfolio() {
 
             <a
               className="visit-link"
-              href="https://mfsami.github.io/WSL-Revamp/#/"
+              href="https://samielsayed.dev/"
               target="_blank"
               rel="noreferrer">
               You are already here!

@@ -22,19 +22,19 @@ export default function Heartbound() {
 
           <article className={styles["case-copy"]}>
             <p>
-              Heartbound is a tiny 2D platformer I created back in 2024—one of
+              Heartbound is a tiny 2D platformer I created back in 2024, one of
               the first games I ever built. It’s short but intentionally tight,
-              a little love letter to how I felt after finishing{" "}
-              <em>Celeste</em>. Built in{" "}
-              <span className="orangeText">Godot</span> with{" "}
+              a little love letter to <em>Celeste</em> and <em>Undertale</em>.
+              Built in <span className="orangeText">Godot</span> with{" "}
               <span className="orangeText">GDScript</span>.
             </p>
 
             <p>
-              Classic platforming loop: precise jumps, hazards, collectibles,
-              readable level beats, and progression. I kept scope small to
-              polish the basics—input handling, player state, hazards,
-              animations, and a couple of set pieces.
+              The concept is quite simple: precise jumps, hazards, collectibles,
+              small interactions, some sound effects, and progression. I kept
+              scope small to polish the basics like input handling, player
+              state, hazards, animations, and a couple of set pieces. This was
+              my intro into game development and it taught me a lot of basics
             </p>
 
             <figure
